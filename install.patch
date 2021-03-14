@@ -1,0 +1,12 @@
+--- dnf-plugins-extras-4.0.13/CMakeLists.txt~	2020-11-23 18:01:07.000000000 +0100
++++ dnf-plugins-extras-4.0.13/CMakeLists.txt	2021-03-14 15:38:42.368805146 +0100
+@@ -3,7 +3,9 @@
+ 
+ FIND_PACKAGE (PythonInterp 3 EXACT REQUIRED)
+ 
++if (NOT PYTHON_INSTALL_DIR)
+ EXECUTE_PROCESS(COMMAND ${PYTHON_EXECUTABLE} -c "from sys import stdout; from distutils import sysconfig; stdout.write(sysconfig.get_python_lib())" OUTPUT_VARIABLE PYTHON_INSTALL_DIR)
++ENDIF()
+ MESSAGE(STATUS "Python install dir is ${PYTHON_INSTALL_DIR}")
+ 
+ SET (SYSCONFDIR /etc)
