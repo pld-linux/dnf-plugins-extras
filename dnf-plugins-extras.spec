@@ -1,10 +1,10 @@
 Summary:	Extras Plugins for DNF
 Name:		dnf-plugins-extras
-Version:	4.0.13
-Release:	4
+Version:	4.0.16
+Release:	1
 License:	GPL v2+
 Source0:	https://github.com/rpm-software-management/dnf-plugins-extras/archive/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	27dbded5f661fb9d9a4741c34ffc7816
+# Source0-md5:	22c566100be065e770a6b0032f8a4ad3
 Patch0:		install.patch
 URL:		https://github.com/rpm-software-management/dnf-plugins-extras
 BuildRequires:	cmake
